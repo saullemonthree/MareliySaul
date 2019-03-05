@@ -1,0 +1,117 @@
+@font-face {
+    src: url("../fonts/InstaStorySignature.ttf");
+    font-family: InstaStorySignature;
+}
+
+/* GENERAL STYLES */
+p {
+    text-align: justify;
+}
+
+.bef-af:before, .bef-af:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.divider {
+    background: url("../img/divider.png") no-repeat center center;
+    height: 60px;
+    margin: 30px 0;
+}
+
+.title::first-line {
+    padding-left: 0;
+}
+
+.title {
+    font-family: InstaStorySignature, sans-serif;
+    transform: rotate(-5deg);
+}
+
+.tabulation {
+    padding-left: 40px;
+}
+
+/* NAVBAR */
+.navbar {
+    position: relative;
+}
+
+.navbar-expand-lg .navbar-collapse {
+    display: block!important;
+}
+
+.navbar:after {
+    width: calc(100% + 30px);
+    height: 150px;
+    top: 0;
+    left: -15px;
+    z-index: -1;
+    background-color: #ecd1d8;
+}
+
+.navbar-nav {
+    flex-direction: row;
+    justify-content: center;
+}
+
+.navbar-nav .nav-link {
+    padding-right: 1.2rem!important;
+    padding-left: 1.2rem!important;
+    position: relative;
+    color: #7e7e98;
+}
+
+.navbar-nav .nav-link:hover {
+    transition: all 300ms ease;
+    color: #070707;
+}
+
+.navbar-nav .nav-link:before {
+    content: url("../img/menuico.png");
+    position: absolute;
+    left: -.8rem;
+    opacity: 0;
+    transition: all 300ms ease;
+}
+
+.navbar-nav .nav-link:hover:before {
+    opacity: 1;
+}
+
+/* STORY SECTION */
+#story #imgs .col-5, #story #imgs .col-7 {
+    height: 500px;
+}
+
+#story #imgs .col-5:before {
+    background: url("../img/nuestra1.png") no-repeat center center;
+    background-size: cover;
+    width: calc(100% + 50px);
+    height: 90%;
+    bottom: -25px;
+    top: auto;
+    z-index: 1;
+}
+
+#story #imgs .col-7:before {
+    background: url("../img/nuestra2.png") no-repeat center center;
+    background-size: cover;
+    width: calc(100% + 50px);
+}
+
+/* LOCATION SECTION */
+#location {
+    background: url("../img/bg1.png") no-repeat center center;
+    background-size: cover;
+}
+
+@media only screen and (max-width: 992px) {
+    .title {
+        font-size: 33px;
+    }
+}
