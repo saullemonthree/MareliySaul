@@ -4,8 +4,16 @@
 }
 
 /* GENERAL STYLES */
+body {
+    font-family: "Helvetica Neue";
+}
+
 p {
     text-align: justify;
+}
+
+.text-gray {
+    color: #7e7e98;
 }
 
 .bef-af:before, .bef-af:after {
@@ -23,13 +31,25 @@ p {
     margin: 30px 0;
 }
 
-.title::first-line {
-    padding-left: 0;
+.divider2 {
+    background: url("../img/divider3.png") no-repeat center center;
+    height: 30px;
+    margin: 15px 0;
+}
+
+.mini-divider {
+    background: url("../img/divider2.png") no-repeat center center;
+    height: 25px;
+    margin: 10px 0;
 }
 
 .title {
     font-family: InstaStorySignature, sans-serif;
     transform: rotate(-5deg);
+}
+
+.title.big {
+    font-size: 60px;
 }
 
 .tabulation {
@@ -83,6 +103,11 @@ p {
     opacity: 1;
 }
 
+/* MAIN TITLE */
+#maintitle img {
+    max-width: 350px;
+}
+
 /* STORY SECTION */
 #story #imgs .col-5, #story #imgs .col-7 {
     height: 500px;
@@ -108,6 +133,168 @@ p {
 #location {
     background: url("../img/bg1.png") no-repeat center center;
     background-size: cover;
+}
+
+#location .title {
+    left: -50px;
+    position: relative;
+    line-height: .5;
+}
+
+#location .info-container {
+    margin: 10px;
+    padding: 0 30px 10px 30px;
+    transition: all 500ms ease;
+    border: 1px solid transparent;
+}
+
+#location .text-container {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+#location .info-container:hover {
+    border: 1px solid #7e7e98;
+}
+
+#location div[class*=col]:nth-of-type(1) .img-container {
+    background: url("../img/location1.png") no-repeat center center;
+}
+
+#location div[class*=col]:nth-of-type(2) .img-container {
+    background: url("../img/location2.png") no-repeat center center;
+}
+
+#location .img-container {
+    height: 400px;
+    background-size: cover;
+}
+
+#location .icon {
+    position: relative;
+}
+
+#location .icon:before {
+    background-size: contain!important;
+    width: 20px;
+    left: -25px;
+    top: 3px;
+    height: 20px;
+}
+
+#location .pin:before {
+    background: url("../img/pin.png") no-repeat center center;
+}
+
+#location .phone:before {
+    background: url("../img/phone.png") no-repeat center center;
+}
+
+#location .date:before {
+    background: url("../img/calendar.png") no-repeat center center;
+}
+
+/* GALLERY SECTION */
+#gallery a > .img-container {
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover!important;
+    background-position: center center;
+    transition: all 400ms ease;
+    position: relative;
+}
+#gallery a > .img-container:hover {
+    opacity: .6;
+}
+
+#gallery a > .img-container:before, #gallery a > .img-container:after {
+    position: absolute;
+    opacity: 0;
+    transition: all 400ms ease;
+}
+
+#gallery a > .img-container:hover:before, #gallery a > .img-container:hover:after {
+    opacity: 1;
+}
+
+#gallery a > .img-container:before {
+    content: '';
+    width: calc(100% - 30px);
+    height: calc(100% - 30px);
+    top: 15px;
+    left: 15px;
+    display: block;
+    border: 2px solid #fff;
+}
+
+#gallery a > .img-container:after {
+    content: '+';
+    color: #fff;
+    line-height: .5;
+    font-size: 50px;
+    font-weight: lighter;
+    display: block;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    vertical-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* GIFTS SECTION */
+#gifts {
+    position: relative;
+}
+
+#gifts:before {
+    display: block;
+    background: url("../img/bg2.png") no-repeat center center;
+    background-size: cover;
+    z-index: -1;
+}
+
+#gifts .divider {
+    width: 120px;
+    background-size: contain;
+    margin: 20px auto;
+}
+
+#gifts .title {
+    line-height: .5;
+}
+
+#gifts .sub-title {
+    padding-left: 100px;
+}
+
+#gifts div[class*=col]:before {
+    display: block;
+    background-color: #fff;
+    transform: skew(-3deg);
+    z-index: -1;
+    pointer-events: none;
+}
+
+#gifts .content {
+    z-index: 1;
+}
+
+/* FOOTER */
+footer {
+    background: url("../img/bg3.png") no-repeat center center;
+    background-size: cover;
+}
+
+footer img {
+    max-width: 350px;
+}
+
+footer hr {
+    border-top: 1px solid #fff;
 }
 
 @media only screen and (max-width: 992px) {

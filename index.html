@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="container text-center mt-5 mb-5">
+<div class="container text-center mt-5 mb-5" id="maintitle">
     <div class="row">
         <div class="col-6 offset-3">
             <img src="img/title.png" alt="Saúl y Mareli" class="img-fluid mx-autos">
@@ -20,19 +20,19 @@
     <div class="navbar-collapse" id="navCollapse">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="#">nuestra historia</a>
+                <a class="nav-link smoothScroll" href="#story">nuestra historia</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">lugar</a>
+                <a class="nav-link smoothScroll" href="#location">lugar</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">galería</a>
+                <a class="nav-link smoothScroll" href="#gallery">galería</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">mesa de regalos</a>
+                <a class="nav-link smoothScroll" href="#gifts">mesa de regalos</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">reservación</a>
+                <a class="nav-link smoothScroll" href="#reserve">reservación</a>
             </li>
         </ul>
     </div>
@@ -43,7 +43,7 @@
 <div class="divider"></div>
 <div class="container mt-5 mb-5" id="story">
     <div class="row">
-        <div class="col-3">
+        <div class="col-3 align-self-center">
             <h1 class="title">
                 Nuestra <span class="tabulation">historia</span>
             </h1>
@@ -74,14 +74,109 @@
         <div class="col-7 bef-af"></div>
     </div>
 </div>
-<div class="container pt-5 pb-5" id="location">
-
+<div class="pt-5 pb-5" id="location">
+    <div class="container text-center">
+        <h1 class="title text-white mt-5">Save the date</h1>
+        <h4 class="sub-title text-gray mb-4">Forma parte de nuestro día</h4>
+        <div class="row text-gray">
+            <div class="col-sm-6 col-md-5 offset-1">
+                <div class="info-container">
+                    <div class="img-container"></div>
+                    <div class="text-container">
+                        <h4 class="text-gray">CEREMONIA</h4>
+                        <p class="text-center text-gray">Queremos que seas parte de nuestra unión.<br>
+                            Acompañanos en nuestra ceremonia.</p>
+                        <div class="mini-divider"></div>
+                        <p class="icon pin bef-af">
+                            <strong>Hotel Sheraton Buganvilias</strong><br>
+                            Blvrd Francisco Medina Ascencio #999<br>
+                            Zona Hotelera Nte. C.P. 48333<br>
+                            Puerto Vallarta, Jal.
+                        </p>
+                        <p class="icon phone bef-af">
+                            <strong>Tel. 01 322 226 0404</strong>
+                        </p>
+                        <p class="icon date bef-af">24 Noviembre 2019</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-5">
+                <div class="info-container">
+                    <div class="img-container"></div>
+                    <div class="text-container">
+                        <h4 class="text-gray">CELEBRACIÓN</h4>
+                        <p class="text-center text-gray">Es fundamental para nosotros contar con tu
+                            presencia en la celebración de nuestra boda.</p>
+                        <div class="mini-divider"></div>
+                        <p class="icon pin bef-af">
+                            <strong>Hotel Sheraton Buganvilias</strong><br>
+                            Blvrd Francisco Medina Ascencio #999<br>
+                            Zona Hotelera Nte. C.P. 48333<br>
+                            Puerto Vallarta, Jal.
+                        </p>
+                        <p class="icon phone bef-af">
+                            <strong>Tel. 01 322 226 0404</strong>
+                        </p>
+                        <p class="icon date bef-af">24 Noviembre 2019</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<footer>
-
+<div class="container pt-5 pb-5" id="gallery">
+    <h1 class="title text-center text-gray">Galeria<br> <span class="tabulation">de fotos</span></h1>
+    <div class="divider2 mb-5"></div>
+    <div class="row">
+        <div class="col-4">
+            <a href="">
+                <div class="img-container" style="background-image: url('img/gallery1.png');"></div>
+            </a>
+        </div>
+        <div class="col-4">
+            <a href="">
+                <div class="img-container" style="background-image: url('img/gallery2.png');"></div>
+            </a>
+        </div>
+        <div class="col-4">
+            <a href="">
+                <div class="img-container" style="background-image: url('img/gallery3.png');"></div>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="bef-af" id="gifts">
+    <div class="container text-gray">
+        <div class="row">
+            <div class="col-6 bef-af pt-5 pb-5">
+                <div class="content pt-5 pb-5">
+                    <h1 class="title big text-center mt-5">Mesa de</h1>
+                    <h3 class="sub-title text-center">regalos</h3>
+                    <div class="divider"></div>
+                    <p class="text-center">
+                        Nuestro mejor regalo es su presencia, pero si gustas hacernos un obsequio,
+                        facilitamos nuestro número de cuenta:
+                    </p>
+                    <p class="text-center">
+                        <strong>
+                            Saúl Alejandro García García<br>
+                            BBVA Bancomer 2661559230<br>
+                            CLABE 012 150 02661559230 4
+                        </strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="pt-5 pb-5">
+    <img class="d-block mx-auto img-fluid" src="img/footer.png" alt="Saúl y Mareli">
+    <hr class="mt-5">
 </footer>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script type="application/javascript" src="js/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script type="application/javascript" src="js/bootstrap.min.js"></script>
+<script type="application/javascript" src="js/smoothScroll.js"></script>
 </body>
 </html>
