@@ -7,12 +7,14 @@
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/photoswipe/photoswipe.css">
+    <link rel="stylesheet" href="css/photoswipe/default-skin.css">
 </head>
 <body>
 <div class="container text-center mt-5 mb-5" id="maintitle">
     <div class="row">
         <div class="col-6 offset-3">
-            <img src="img/title.png" alt="Saúl y Mareli" class="img-fluid mx-autos">
+            <img src="img/title.png" alt="Saúl y Mareli" class="mx-auto">
         </div>
     </div>
 </div>
@@ -79,7 +81,7 @@
         <h1 class="title text-white mt-5">Save the date</h1>
         <h4 class="sub-title text-gray mb-4">Forma parte de nuestro día</h4>
         <div class="row text-gray">
-            <div class="col-sm-6 col-md-5 offset-1">
+            <div class="col-md-6 col-lg-5 offset-lg-1 p-0">
                 <div class="info-container">
                     <div class="img-container"></div>
                     <div class="text-container">
@@ -100,7 +102,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-md-5">
+            <div class="col-md-6 col-lg-5 p-0">
                 <div class="info-container">
                     <div class="img-container"></div>
                     <div class="text-container">
@@ -127,23 +129,92 @@
 <div class="container pt-5 pb-5" id="gallery">
     <h1 class="title text-center text-gray">Galeria<br> <span class="tabulation">de fotos</span></h1>
     <div class="divider2 mb-5"></div>
-    <div class="row">
-        <div class="col-4">
-            <a href="">
-                <div class="img-container" style="background-image: url('img/gallery1.png');"></div>
-            </a>
-        </div>
-        <div class="col-4">
-            <a href="">
-                <div class="img-container" style="background-image: url('img/gallery2.png');"></div>
-            </a>
-        </div>
-        <div class="col-4">
-            <a href="">
-                <div class="img-container" style="background-image: url('img/gallery3.png');"></div>
-            </a>
-        </div>
+    <div class="row ps-gallery">
+            <figure class="col-4" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                <a href="img/gallery1.png" itemprop="contentUrl" data-size="468x648">
+                    <img src="" itemprop="thumbnail" class="d-none">
+                    <div class="img-container" style="background-image: url('img/gallery1.png');"></div>
+                </a>
+            </figure>
+            <figure class="col-4" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                <a href="img/gallery2.png" itemprop="contentUrl" data-size="468x648">
+                    <img src="" itemprop="thumbnail" class="d-none">
+                    <div class="img-container" style="background-image: url('img/gallery2.png');"></div>
+                </a>
+            </figure>
+            <figure class="col-4" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                <a href="img/gallery3.png" itemprop="contentUrl" data-size="468x648">
+                    <img src="" itemprop="thumbnail" class="d-none">
+                    <div class="img-container" style="background-image: url('img/gallery3.png');"></div>
+                </a>
+            </figure>
     </div>
+</div>
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
 </div>
 <div class="bef-af" id="gifts">
     <div class="container text-gray">
@@ -185,13 +256,20 @@
     </div>
 </div>
 <footer class="pt-5 pb-5">
-    <img class="d-block mx-auto img-fluid" src="img/footer.png" alt="Saúl y Mareli">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <img class="d-block mx-auto" src="img/footer.png" alt="Saúl y Mareli">
+        </div>
+    </div>
     <hr class="mt-5">
 </footer>
 <script type="application/javascript" src="js/jquery.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script type="application/javascript" src="js/bootstrap.min.js"></script>
+<script type="application/javascript" src="js/photoswipe/photoswipe.min.js"></script>
+<script type="application/javascript" src="js/photoswipe/photoswipe-ui-default.min.js"></script>
+<script type="application/javascript" src="js/photoswipe/init.js"></script>
 <script type="application/javascript" src="js/smoothScroll.js"></script>
 </body>
 </html>

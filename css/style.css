@@ -236,7 +236,7 @@ p {
 #gallery a > .img-container:after {
     content: '+';
     color: #fff;
-    line-height: .5;
+    line-height: .75;
     font-size: 50px;
     font-weight: lighter;
     display: block;
