@@ -16,6 +16,10 @@ p {
     color: #7e7e98;
 }
 
+.text-light-gray {
+    color: #dedee8;
+}
+
 .bef-af:before, .bef-af:after {
     content: '';
     position: absolute;
@@ -116,7 +120,7 @@ p {
 #story #imgs .col-5:before {
     background: url("../img/nuestra1.png") no-repeat center center;
     background-size: cover;
-    width: calc(100% + 50px);
+    width: calc(100% + 40px);
     height: 90%;
     bottom: -25px;
     top: auto;
@@ -127,6 +131,8 @@ p {
     background: url("../img/nuestra2.png") no-repeat center center;
     background-size: cover;
     width: calc(100% + 50px);
+    right: 0;
+    left: auto;
 }
 
 /* LOCATION SECTION */
@@ -281,6 +287,34 @@ p {
 
 #gifts .content {
     z-index: 1;
+}
+
+/* RESERVATION SECTION */
+#reserve {
+    padding: 100px 0;
+}
+
+#reserve .title {
+    left: -80px;
+    position: relative;
+    line-height: .4;
+}
+
+#reserve .sub-title {
+    margin-bottom: 80px;
+}
+
+#reserve input {
+    width: 100%;
+    margin-bottom: 25px;
+    padding: 10px;
+    border: none;
+    background-color: #eeeeee;
+}
+
+#reserve button {
+    width: 100%;
+    background-color: #a3d6d9;
 }
 
 /* FOOTER */
